@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        .err{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://localhost:3000/login" method="POST">
+        <table>
+            <tr>
+                <th><span class="err"><%=errMsg.networkErr%></span></th>
+            </tr>
+            <tr>
+                <th><span class="err"><%=errMsg.emailOrpasswordErr%></span></th>
+            </tr>
+            <tr>
+                <th>邮箱：</th>
+                <th><input type="text" name="email" value=<%=errMsg.email%>></th>
+                <th><span class="err"><%=errMsg.emailErr%></span></th>
+            </tr>
+            <tr>
+                <th>密码：</th>
+                <th><input type="password" name="password"></th>
+                <th><span class="err"><%=errMsg.passwordErr%></span></th>
+            </tr>
+            <tr>
+                <th><input type="submit" value="提交"></th>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
